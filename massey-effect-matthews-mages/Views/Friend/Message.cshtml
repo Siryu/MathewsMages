@@ -1,0 +1,19 @@
+﻿@using massey_effect_matthews_mages.Models
+@model Message
+
+@{
+    ViewBag.StyleSheet = "KurtsSheet.css";
+}
+
+<section id="content">
+    <div class="messagebody">
+        <h2>To: @Model.Receiver</h2>
+        <h2>From: @Model.Sender</h2>
+        <hr />
+        <p>@Model.Message1</p>     
+        <a href="~/Web/Friends">Return to Friends page.</a>   
+    </div>
+
+    <div class="coolio" id="bot">
+    </div>
+</section>

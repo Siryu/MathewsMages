@@ -1,0 +1,36 @@
+﻿@model massey_effect_matthews_mages.Models.FriendData
+
+@{
+    ViewBag.StyleSheet = "KurtsSheet.css";
+}
+
+
+
+<section id="content">
+    <div class="friendsdiv">
+        <h1 class="mainsocialheader">Friends</h1>
+        @if (Model != null)
+        {
+            <div class="toptwo">                
+                @Html.Partial("../Friend/Messages", Model.Messages)
+                @Html.Partial("../Friend/FriendsList", Model.FriendsList)
+            </div>
+            <br />
+            <div class="bottomtwo">                
+                @Html.Partial("../Friend/ActiveFriendRequests", Model.ActiveRequests)
+                @Html.Partial("../Friend/NotFriends", Model.NotFriends)
+            </div>
+        }
+        else
+        {
+            <h1>Oops! This Page is broken!</h1>
+        }
+    </div>
+
+    <div class="coolio" id="bot">
+    </div>
+
+    @Html.Partial("../Shared/_SpinnerPartial")
+
+</section>
+

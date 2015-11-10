@@ -1,0 +1,36 @@
+﻿@using massey_effect_matthews_mages.Models
+@model IEnumerable<Message>
+
+<div class="ldiv boxdiv">
+    <h1 class="socialheader">Messages</h1>
+    <br />
+    <div class="messagesdiv">
+        @if (Model != null && Model.Count() > 0)
+        {
+            foreach (Message m in Model)
+            {
+                string name = m.Sender;
+                if(m.Sender.ToString().Length > 10)
+                {
+                    name = name.Substring(0, 10) + "...";
+                }
+                string message = m.Message1;
+                if(message.Length > 15)
+                {
+                    message = m.Message1.Substring(0, 10)+"...";
+                }
+                <div class="socialline">
+                    <p class="socialp">@name : @message</p>
+
+                    <form class="socialbutton" action="~/Friend/DeleteMessage" method="post">
+                        <button class="socialimage" name="messageId" value="@m.Id" type="submit"><img src="~/Content/Images/Delete.png" /></button>
+                    </form>
+
+                    <form class="socialbutton" action="~/Friend/ViewMessage" method="get">
+                        <button class="socialimage" name="messageId" value="@m.Id" type="submit"><img src="~/Content/Images/View.png" /></button>
+                    </form>
+                </div>
+            }
+        }
+    </div>
+</div>

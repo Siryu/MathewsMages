@@ -1,0 +1,74 @@
+﻿#spinner {
+    top: 290px;
+}
+
+#house {
+    width: 900px;
+    height: 500px;
+    margin: 0px auto;
+    margin-top: 300px;  
+    background: url("/Content/Images/Room.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center;
+    border: none;
+}
+
+#nameplate {
+    width: 900px;
+    height: 40px;
+    border: 2px solid #000;
+    margin: 0px auto;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    background-color: rgba(255,0,0,0.1); 
+}
+
+.cleck {
+    color: #fff;
+    font-size: 18px;
+    height: 20px;
+    background: rgba(255,0,0,0.7);
+    text-align: center;
+    position:relative;
+    cursor: pointer;
+}
+
+#swerd {
+    width: 100px;
+    top: 350px;
+    left: 480px;
+}
+
+#merp {
+    width: 125px;
+    top: 30px;
+    left: 108px;
+}
+
+#sherld {   
+    width: 100px;
+    top: 105px;
+    left: 405px;
+}
+
+.pops {
+    color: #fff;
+    border: 2px solid #000;
+    z-index: 10001;
+    height: auto;
+    width: 200px;
+    position:relative;
+    top: 300px;
+    left: 0px;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+
+html {
+    min-width: 1600px;
+}

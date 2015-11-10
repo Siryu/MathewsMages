@@ -1,0 +1,589 @@
+font-family: 'Open Sans', sans-serif;
+
+* {
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+html, body, main {
+    height: 100%;
+}
+
+html {
+    overflow-x: hidden;
+    min-width: 1200px;
+}
+
+body {
+    background: url("/Content/Images/clouds2.jpg");
+    background-position: left;
+    background-repeat: repeat;
+    margin: 0px;
+}
+
+main {
+    height: auto;
+    min-height: 99%;
+}
+
+footer{
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 250px;
+    background-color: #333;
+    margin-top: -250px;
+    background: url("/Content/Images/title.png");
+    background-position: bottom;
+}
+
+#content {
+    padding-bottom: 250px;   
+}
+
+a {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(55,55,55,0.4);
+}
+
+
+.navlink {
+    color: #fff;
+    font-size: 30px;
+    background: rgba(0,0,0,0.0);
+    height: 98%;
+    width: 22%;
+    border: none;
+}
+
+.ps {
+    font-weight: bolder;
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navlink:hover {
+    -moz-box-shadow:    inset 0 0 50px #DDD;
+   -webkit-box-shadow: inset 0 0 50px #ff0000;
+   box-shadow:         inset 0 0 50px #ff0000;
+   color: #ff0000;
+}
+
+#block {
+    position: relative;
+    padding-left: 2px;
+    width: 1000px;
+    min-width: 1000px;
+    height: 100px;  
+    display: block;
+    margin: 0px auto;
+    z-index: 1004;
+}
+
+#title {
+    background-image: url("/Content/Images/title.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    z-index: 1;
+    height: 650px;
+    margin-top: 100px;
+    width: 100%;
+    min-width: 1400px;
+}
+
+#copyright {
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    width: 230px;
+    padding-left: 35px;
+    margin-top: 80px;
+    margin-left: 240px;
+    font-size: 18px;
+}
+
+#fix {
+    height: 145px;
+    background: none;
+    border: none;
+    border-radius: 0px;
+    width: 750px;
+    margin: 0px auto;
+    padding: 0px;
+    padding-top: 5px;
+    display: block;
+}
+
+.social
+{
+    height: 64px;
+    width: 64px;
+    padding: 0px;
+    border-radius: 35px;
+    border: 2px solid #000;
+}
+
+.social:hover
+{
+    border: 2px solid #ff0000;
+}
+
+
+#facebook {
+    position: absolute;
+    top: 150px;
+    margin-left: 250px;
+    background: url("/Content/Images/sprite.jpg") -196px -130px;
+}
+
+#twitter {
+    position: absolute;
+    top: 125px;
+    margin-left: 320px;
+	background: url("/Content/Images/sprite.jpg") -196px -65px;   
+}
+
+#google {
+    position: absolute;
+    top: 150px;
+    margin-left: 390px;
+	background: url("/Content/Images/sprite.jpg") -66px -130px;   
+}
+
+#youtube {
+    position: absolute;
+    top: 125px;
+    margin-left: 460px;
+	background: url("/Content/Images/sprite.jpg") -131px -65px;  
+}
+
+#intro
+{
+    color: #fff;
+    font-size: 70px;
+    width: 500px;
+    margin: 150px auto;
+    padding-left: 80px;
+}
+
+#sign
+{
+    position: relative;
+    z-index: 1001;
+    display: block;
+    background-color: #99a590;
+    text-decoration: none;
+    border: none;
+    height: 102px;
+    width: 250px;
+    font-size: 30px;
+    margin: 10px auto;
+    margin-top: -174px;
+    background: url("/Content/Images/button.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sign:hover {
+    background: url("/Content/Images/button1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#facebook2 {
+    position: absolute;
+    top: 250px;
+    margin-top: -200px;
+    margin-left: 95px;
+    padding: 5px;
+    height: 25px; 
+    width: 150px;
+    background: rgba(255,255,255,0.3);
+}
+
+#out {
+    text-align: center;
+    height: 250px;
+    width: 900px;
+    background: rgba(55,55,55,0.4);
+    margin: 0px auto;
+    margin-top: 100px;
+    padding: 100px;
+    font-size: 40px; 
+}
+
+#out > article {
+    width: 600px;
+    margin: 0px auto;
+    margin-bottom: 100px;
+    color: #fff;
+}
+
+#out > a {
+    color: #ff0000;
+    margin: 0px auto;
+}
+
+#out > a:visited {
+    color: #ff0000;
+}
+
+/* mouse over link */
+#out > a:hover {
+    color: #330000;
+}
+
+.coolio {
+    margin-bottom: -100px;
+    padding: 0px;
+    position: relative;
+    z-index: 1000;
+    height:249px;
+    width: 100%;
+    background: url("/Content/Images/corner4.png"), url("/Content/Images/corner3.png"), url("/Content/Images/bricks.png");
+    background-position: left, right , left;  
+	background-repeat: no-repeat, no-repeat, repeat-x;
+}
+
+#breaker {
+    margin-bottom: 0px;
+    margin-top: -100px
+}
+
+#bot {
+    margin-bottom: -100px;
+}
+
+#top {
+    margin-top: -100px;
+}
+
+#slide {
+    display:none;
+    border: 2px solid #000;
+    height: 400px; 
+    width: 800px;
+    margin: 0px auto;
+}
+
+#canvas-container {
+    background-image:url("/Content/Images/gameborder.png");
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:250px;
+    height:876px;
+    width:876px;
+}
+
+
+#house {
+    height: 900px;
+    width: 900px;
+    margin: 0px auto;
+    margin-top: 250px;
+    margin-bottom: 35px;
+    border: 2px solid #000;
+    background: rgba(255,255,255,0.2);
+}
+canvas {
+    height: 800px; 
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top:40px;
+}
+
+
+.wrapper {
+    width: 512px;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+#spinner {
+    height: 566px;
+    width: 566px;
+    position: absolute;
+    top: 350px;
+    left: -250px;
+    background: url("/Content/Images/spinner2.png");
+-webkit-animation: spin 10s infinite linear;
+   -moz-animation: spin 10s infinite linear;
+	 -o-animation: spin 10s infinite linear;
+	-ms-animation: spin 10s infinite linear;
+		animation: spin 10s infinite linear;
+		
+-webkit-animation-direction: normal;
+   -moz-animation: alternate;
+	 -o-animation: alternate;
+	-ms-animation: alternate; 
+		animation: alternate;
+}
+
+#spinner:hover
+{
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
+}
+
+#innerspinner {
+    height: 566px;
+    width: 566px;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    background: url("/Content/Images/spinner1.png");
+    
+-webkit-animation: spin1 20s infinite linear;
+   -moz-animation: spin1 20s infinite linear;
+	 -o-animation: spin1 20s infinite linear;
+	-ms-animation: spin1 20s infinite linear;
+		animation: spin1 20s infinite linear;
+		
+-webkit-animation-direction: normal;
+   -moz-animation: alternate;
+	 -o-animation: alternate;
+	-ms-animation: alternate; 
+		animation: alternate; 
+}
+
+#innerspinner
+{
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
+}
+
+.lonk {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-position: center;
+}
+
+#deer {
+    left: 395px; 
+    top: 225px;
+    background: url("/Content/Images/DeerHead.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#deer:hover {
+    background: url("/Content/Images/DeerHead1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#door {
+    -ms-transform: rotate(-45deg); /* IE 9 */
+-webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+        transform: rotate(-45deg);
+    left: 345px;
+    top: 105px;
+    background: url("/Content/Images/Door2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#door:hover {
+    background: url("/Content/Images/Door.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sword {
+    -ms-transform: rotate(45deg); /* IE 9 */
+-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        transform: rotate(45deg);
+    left: 345px;
+    top: 355px;
+    background: url("/Content/Images/Sword.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sword:hover {
+    background: url("/Content/Images/Sword1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#candle {
+    -ms-transform: rotate(-270deg); /* IE 9 */
+-webkit-transform: rotate(-270deg); /* Chrome, Safari, Opera */
+        transform: rotate(-270deg);
+    left: 235px;
+    top: 395px;
+    background: url("/Content/Images/Candle1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#candle:hover {
+    background: url("/Content/Images/Candle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#mail {
+    -ms-transform: rotate(-90deg); /* IE 9 */
+-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+        transform: rotate(-90deg);
+    left: 215px;
+    top: 65px;
+    background: url("/Content/Images/Envelope.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#mail:hover {
+    background: url("/Content/Images/Envelope1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#chest {
+    -ms-transform: rotate(-135deg); /* IE 9 */
+-webkit-transform: rotate(-135deg); /* Chrome, Safari, Opera */
+        transform: rotate(-135deg);
+    left: 100px;
+    top: 120px;
+    background: url("/Content/Images/store2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+#chest:hover {
+    background: url("/Content/Images/store1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#scroll {
+    -ms-transform: rotate(-180deg); /* IE 9 */
+-webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+        transform: rotate(-180deg);
+    top: 245px;
+    left: 65px;
+    background: url("/Content/Images/Scroll.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#scroll:hover {
+    background: url("/Content/Images/Scroll1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#placebo {
+    -ms-transform: rotate(-315deg); /* IE 9 */
+-webkit-transform: rotate(-315deg); /* Chrome, Safari, Opera */
+        transform: rotate(-315deg);
+    top: 355px;
+    left: 135px;
+}
+
+#logoutForm {
+    display: inline-block;
+    width: 22%;
+    height: 100px;
+    vertical-align: top;
+}
+
+#logoutForm > a {
+    width: 100%;
+    height: 100px;
+}
+
+#fuckyou {
+    height: 98px;
+    width: 220px;
+    display: inline-block;
+}
+
+#gameTitle {
+    height: 800px;
+}
+
+
+
+/* Animation stuff*/
+
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg);}
+100% { -webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+0% { -moz-transform: rotate(0deg);}
+100% { -moz-transform: rotate(360deg);}
+}
+@-o-keyframes spin {
+0% { -o-transform: rotate(0deg);}
+100% { -o-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+0% { -ms-transform: rotate(0deg);}
+100% { -ms-transform: rotate(360deg);}
+}
+@-keyframes spin {
+0% { transform: rotate(0deg);}
+100% { transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spin1 {
+0% { -webkit-transform: rotate(0deg);}
+100% { -webkit-transform: rotate(-360deg);}
+}
+@-moz-keyframes spin1 {
+0% { -moz-transform: rotate(0deg);}
+100% { -moz-transform: rotate(-360deg);}
+}
+@-o-keyframes spin1 {
+0% { -o-transform: rotate(0deg);}
+100% { -o-transform: rotate(-360deg);}
+}
+@-ms-keyframes spin1 {
+0% { -ms-transform: rotate(0deg);}
+100% { -ms-transform: rotate(-360deg);}
+}
+@-keyframes spin1 {
+0% { transform: rotate(0deg);}
+100% { transform: rotate(-360deg);}

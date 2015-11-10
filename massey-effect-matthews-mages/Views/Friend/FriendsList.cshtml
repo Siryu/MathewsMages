@@ -1,0 +1,27 @@
+﻿@model IEnumerable<string>
+
+<div class="rdiv boxdiv">
+    <h1 class="socialheader">Friends List</h1>
+    <br />
+    <div class="friendslistdiv">
+        @if (Model != null && Model.Count() > 0)
+        {
+            foreach (string friend in Model)
+            {
+                <div class="socialline">
+                    <p class="socialp">@friend</p>
+
+                    <form class="socialbutton" action="~/Friend/RemoveFriend" method="post">
+                        <button class="socialimage" name="friend" value="@friend" type="submit"><img src="~/Content/Images/Delete.png" /></button>
+                    </form>
+
+                        <a href="\FProfile\@friend"><button class="socialimage"><img src="~/Content/Images/View.png" /></button></a>
+
+                    <form class="socialbutton" action="~/Friend/NewMessage" method="post">
+                        <button class="socialimage" name="friend" value="@friend" type="submit"><img src="~/Content/Images/Message.png" /></button>
+                    </form>
+                </div>
+            }
+        }
+    </div>
+</div>

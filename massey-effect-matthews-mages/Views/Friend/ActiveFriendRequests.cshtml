@@ -1,0 +1,26 @@
+﻿@using massey_effect_matthews_mages.Models
+@model IEnumerable<FriendRequest>
+
+<div class="ldiv boxdiv">
+    <h1 class="socialheader">Active Friend Requests</h1>
+    <br />
+    <div class="activefriendrequestsdiv">
+        @if (Model != null && Model.Count() > 0)
+        {
+            foreach (FriendRequest fr in Model)
+            {
+                <div class="socialline">
+                    <p class="socialp">@fr.Sender</p>
+
+                    <form class="socialbutton" action="~/Friend/DenyFriendRequest" method="post">
+                        <button class="socialimage" name="sender" value="@fr.Sender" type="submit"><img src="~/Content/Images/Deny.png" /></button>
+                    </form>
+
+                    <form class="socialbutton" action="~/Friend/AcceptFriendRequest" method="post">
+                        <button class="socialimage" name="sender" value="@fr.Sender" type="submit"><img src="~/Content/Images/Approve.png" /></button>
+                    </form>
+                </div>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@using massey_effect_matthews_mages.Models
+@model IEnumerable<LogUser>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Users</title>
+</head>
+<body>
+    <a href="~/">Return to Site</a>
+    <hr/>
+    <section>
+        <form>
+            <input type="text" name="searchCriteria" />
+            <input type="submit" value="Search"/>
+        </form>
+    </section>
+    <section> 
+        <br />
+        @if(Model.Any())
+        { 
+            foreach(LogUser user in Model)
+            {
+                string editLink = "/Admin/EditUser/" + user.UserName;
+                string deleteLink = "/Admin/DeleteUser/" + user.UserName;
+                <section>@user.UserName <a href=@editLink + >Edit</a></section>
+            }
+        }
+        else
+        {
+            <p>No results...</p>
+        }
+    </section>
+</body>
+</html>

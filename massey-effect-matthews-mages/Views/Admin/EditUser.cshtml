@@ -1,0 +1,56 @@
+﻿@model massey_effect_matthews_mages.Models.UserViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="~/Content/CSS/validation.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>EditUser</title>
+</head>
+<body>
+    <a href="~/">Return to Site</a>
+    <hr />
+    <section>
+        @using(Html.BeginForm("EditUser/" + Model.User.UserName, "Admin", FormMethod.Post))
+        {
+            <h1>Username: @Model.User.UserName</h1>
+            <hr />
+            @Html.ValidationSummary()
+            <h4>Attack: @Model.Attack</h4>
+            @Html.TextBoxFor(m => m.Attack)
+            @*<h4>Attack Range: @Model.AttackRange</h4>
+            @Html.TextBoxFor(m => m.AttackRange)
+            <h4>Attack Speed: @Model.AttackSpeed</h4>
+            @Html.TextBoxFor(m => m.AttackSpeed)*@
+            <h4>Health: @Model.CurrentHealth / 100</h4>
+            @Html.TextBoxFor(m => m.CurrentHealth)
+            <h4>Defense: @Model.Defense</h4>
+            @Html.TextBoxFor(m => m.Defense)
+            <h4>Monsters Killed: @Model.MonstersKilled</h4>
+            @Html.TextBoxFor(m => m.MonstersKilled)
+            @*<h4>Move Speed: @Model.MoveSpeed</h4>
+            @Html.TextBoxFor(m => m.MoveSpeed)*@
+            <h4>Rooms Traveled: @Model.RoomsTraveled</h4>
+            @Html.TextBoxFor(m => m.RoomsTraveled)
+            <h4>Highest Attack Achieved: @Model.HighestAttackAchieved</h4>
+            @Html.TextBoxFor(m => m.HighestAttackAchieved)
+            <h4>Highest Defense Achieved: @Model.HighestDefenseAchieved</h4>
+            @Html.TextBoxFor(m => m.HighestDefenseAchieved)
+            <br/>
+            <br/>
+            <input type="submit" class="button" value="Submit Changes" />
+
+        } 
+        @using(Html.BeginForm("DeleteUser/" + Model.User.UserName, "Admin", FormMethod.Post))
+        {
+            <br/>
+            <input type="submit" class="button" value="Delete" />
+        }
+    </section>
+</body>
+</html>

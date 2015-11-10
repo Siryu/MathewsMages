@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Game";
+    ViewBag.StyleSheet = "mattstyle.css";
+}
+
+<section id="content">
+    @Html.Partial("../Shared/_SpinnerPartial");
+    
+    <div id="objective">
+        <h2>Kill monsters, powerup, and advance as far as you can.</h2>
+    </div>
+
+    <div id="keyControl">
+    </div>
+
+    <div id="spacebar">
+        <p>Attack</p>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="canvas"> </canvas>
+        <div id="restart">Play Again</div>
+    </div>
+
+    
+
+    <audio controls loop autoplay hidden>
+        <source src="~/Content/Music/DST-BaySide.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="coolio" id="bot">
+    </div>
+
+</section>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<script src="~/Content/GameContent/JavaScript/input.js"></script>
+<script src="~/Content/GameContent/JavaScript/resources.js"></script>
+<script src="~/Content/GameContent/JavaScript/sprite.js"></script>
+<script src="~/Content/GameContent/JavaScript/app.js"></script>

@@ -1,0 +1,49 @@
+﻿@using massey_effect_matthews_mages.Models
+@model User
+
+@{
+    ViewBag.Title = "Prof";
+    ViewBag.StyleSheet = "fixer.css";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="~/Content/JS/prof.js"> </script>
+
+<section id="content">
+
+    <section id="house">
+        <div class="cleck" id="swerd">
+            <article>Current Kills</article>
+        </div>
+        <div class="cleck" id="sherld">
+            <article>Current Stats</article>
+        </div>
+        <div class="cleck" id="merp">
+            <article>Rooms Cleared</article>
+        </div>
+
+        <section id="stats" class="pops">
+            <article>Stats: </article>
+            <article>Health: @Model.CurrentHealth </article>
+            <article>Attack: @Model.Attack </article>
+            <article>Defense: @Model.Defense </article>
+        </section>
+        <section id="kills" class="pops">
+            <article>Monsters Killed: @Model.MonstersKilled </article>
+        </section>
+        <section id="rooms" class="pops">
+            <article>Rooms Cleared: @Model.RoomsTraveled </article>
+        </section>
+
+    </section>
+
+    <section id="nameplate">
+        <article>UserName: @Model.UserName </article>
+    </section>
+
+    @Html.Partial("../Shared/_SpinnerPartial");
+
+    <div class="coolio" id="bot">
+    </div>
+</section>

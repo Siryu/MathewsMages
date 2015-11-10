@@ -1,0 +1,21 @@
+﻿@using massey_effect_matthews_mages.Models
+@model IEnumerable<string>
+
+<div class="rdiv boxdiv">
+    <h1 class="socialheader">Find Some Friends</h1>
+    <br />
+    <div class="notfriendsdiv">
+        @if (Model != null && Model.Count() > 0)
+        {
+            foreach (string user in Model)
+            {
+                <div class="socialline">
+                    <p class="socialp">@user</p>
+                    <form class="socialbutton" action="~/Friend/RequestFriend" method="post">
+                        <button class="socialimage" name="name" value="@user" type="submit"><img src="~/Content/Images/Add.png" /></button>
+                    </form>
+                </div>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Game";
+    ViewBag.StyleSheet = "mattstyle.css";
+}
+
+<section id="content">
+<<<<<<< HEAD
+        <div id="canvas-container">
+=======
+    @Html.Partial("../Shared/_SpinnerPartial");
+    <div id="game-over-overlay">
+    </div>
+
+    <div id="game-over">
+        <h1>GAME OVER</h1>
+        <button id="play-again">Play Again</button>
+    </div>
+
+    <div class="wrapper" hidden="hidden">
+        <div id="instructions">
+            <div>
+                move with <span class="key">arrows</span> or <span class="key">wasd</span>
+            </div>
+            <div>
+                shoot with <span class="key">space</span>
+            </div>
+        </div>
+
+        <div id="score"></div>
+    </div>
+
+    <div id="canvas-container">
+>>>>>>> 93b97476d46ac6f51f3edaecafc9b96948f915a6
+    <canvas id="canvas"> </canvas>
+        <div id="restart">Play Again</div>
+    </div>
+
+    <div class="coolio" id="bot">
+    </div>
+
+</section>
+<style>
+    #restart {
+        display:none;
+        position: absolute;
+        top: 765px;
+        right: 840px;
+        font-size: 34px;
+        font-family: "open sans";
+        padding: 10px 25px 10px 25px;
+        background-color: #455cbf;
+        color: #DEDEDE;
+        font-weight: 300;
+        cursor: pointer;
+        -webkit-box-shadow: 0px 11px 25px 5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 11px 25px 5px rgba(0,0,0,0.75);
+        box-shadow: 0px 11px 25px 5px rgba(0,0,0,0.75);
+    }
+</style>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<script src="~/Content/GameContent/JavaScript/input.js"></script>
+<script src="~/Content/GameContent/JavaScript/resources.js"></script>
+<script src="~/Content/GameContent/JavaScript/sprite.js"></script>
+<script src="~/Content/GameContent/JavaScript/app.js"></script>

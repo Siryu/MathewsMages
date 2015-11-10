@@ -1,0 +1,25 @@
+﻿@model massey_effect_matthews_mages.Models.Message
+@{
+    ViewBag.StyleSheet = "KurtsSheet.css";
+}
+
+<section id="content">
+    <div class="newmessagebody">
+        <h2>To: @Model.Receiver</h2>
+        <h2>From: @Model.Sender</h2>
+        @using (Html.BeginForm("SendMessage", "Friend", FormMethod.Post))
+        {
+            @Html.HiddenFor(x => x.Id);
+            @Html.HiddenFor(x => x.TimeStamp);
+            @Html.HiddenFor(x => x.Receiver)
+            @Html.HiddenFor(x => x.Sender)
+            @Html.TextAreaFor(x => x.Message1, new { @class = "messagebox" });  
+
+            <input type="submit" class="sendmessagebutton" value="Send" />
+        }
+        <a href="~/Web/Friends">Cancel</a>
+    </div>
+
+    <div class="coolio" id="bot">
+    </div>
+</section>

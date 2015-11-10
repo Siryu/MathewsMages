@@ -1,0 +1,136 @@
+﻿@using massey_effect_matthews_mages.Models
+@model Leaderboard
+
+@{
+    ViewBag.StyleSheet = "KurtsSheet.css";
+}
+
+<section id="content">
+    <div class="leaderboardbody">
+        @if (Model.IsGlobal)
+        {
+            <h2>Global Leaderboard</h2>
+            <div class="switchleaderboard">
+                <a class="selectedleaderboardbutton selected" href="~/Leaderboard/SwitchToGlobal">Global</a>
+                <a class="selectedleaderboardbutton" href="~/Leaderboard/SwitchToFriends" >Friends</a>
+            </div>
+        }
+        else
+        {
+            <h2>Friends Leaderboard</h2>
+            <div class="switchleaderboard">
+                <a class="selectedleaderboardbutton" href="~/Leaderboard/SwitchToGlobal" >Global</a>
+                <a class="selectedleaderboardbutton selected" id="quick" href="~/Leaderboard/SwitchToFriends">Friends</a>
+            </div>
+        }
+        <table class="leaderboardtable">
+            <thead>
+                <tr>
+                    <td>
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByNameAscending" method="post">                               
+                            @Html.HiddenFor(x => Model.IsGlobal)                         
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/UpArrow.png" />
+                            </button>
+                        </form>
+                        User Name
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByNameDescending" method="post">                            
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/DownArrow.png" />
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByMonstersKilledAscending" method="post">
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/UpArrow.png" />
+                            </button>
+                        </form>
+                        Monsters killed
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByMonstersKilledDescending" method="post">
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/DownArrow.png" />
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByRoomsTravelledAscending" method="post">
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/UpArrow.png" />
+                            </button>
+                        </form>
+                        Rooms Travelled
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByRoomsTravelledDescending" method="post">
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/DownArrow.png" />
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByAttackAscending" method="post">
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/UpArrow.png" />
+                            </button>
+                        </form>
+                        Attack
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByAttackDescending" method="post">
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/DownArrow.png" />
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByDefenseAscending" method="post">
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/UpArrow.png" />
+                            </button>
+                        </form>
+                        Defense
+                        <form class="scrollarrowcontainer" action="~/Leaderboard/SortByDefenseDescending" method="post">
+                            @Html.HiddenFor(x => Model.IsGlobal)
+                            <button class="scrollarrow" name="isGlobal" value="@Model.IsGlobal" type="submit">
+                                <img src="~/Content/Images/DownArrow.png" />
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </thead>
+            @if (Model != null && Model.Users != null && Model.Users.Count() > 0)
+            {
+                foreach (User u in Model.Users)
+                {
+                    <tr>
+                        <td>@u.UserName</td>
+                        <td>@u.HighMonstersKilled</td>
+                        <td>@u.HighRoomsTraveled</td>
+                        <td>@u.HighAttack</td>
+                        <td>@u.HighDefense</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <div class="coolio" id="bot">
+    </div>
+
+    @Html.Partial("../Shared/_SpinnerPartial");
+</section>
